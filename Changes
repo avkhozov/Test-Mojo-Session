@@ -1,4 +1,7 @@
 Revision history for Perl extension Test::Mojo::Session.
 
+0.02  2013-03-07
+    - Fixed bug with passing args to new method in base class.
+
 0.01  2013-03-06
-    -First release of Test::Mojo::Session.
+    - First release of Test::Mojo::Session.
