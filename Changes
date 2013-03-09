@@ -1,5 +1,8 @@
 Revision history for Perl extension Test::Mojo::Session.
 
+0.03  2013-03-09
+    - Set minimum version of Mojolicious to 3.47.
+
 0.02  2013-03-07
     - Fixed bug with passing args to new method in base class.
 

@@ -3,7 +3,7 @@ package Test::Mojo::Session;
 use Mojo::Base 'Test::Mojo';
 use Mojo::Util 'b64_decode';
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
     my $self = shift->SUPER::new(@_);
