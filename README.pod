@@ -71,12 +71,13 @@ L<Mojolicious>, L<Test::Mojo>.
 
 =head1 AUTHOR
 
-Andrey Khozov, E<lt>avkhozov@googlemail.comE<gt>
+Andrey Khozov, C<avkhozov@googlemail.com>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2013 by avkhozov
+Copyright (C) 2013-2014, Andrey Khozov.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.10.1 or,
-at your option, any later version of Perl 5 you may have available.
+This program is free software, you can redistribute it and/or modify it under
+the terms of the Artistic License version 2.0.
+
+=cut
