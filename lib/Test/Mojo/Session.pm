@@ -3,7 +3,7 @@ package Test::Mojo::Session;
 use Mojo::Base 'Test::Mojo';
 use Mojo::Util qw(b64_decode hmac_sha1_sum);
 
-our $VERSION = '1.0';
+our $VERSION = '1.01';
 
 sub new {
     my $self = shift->SUPER::new(@_);

@@ -6,7 +6,7 @@ WriteMakefile(
     NAME => 'Test::Mojo::Session',
     VERSION_FROM => 'lib/Test/Mojo/Session.pm',
     PREREQ_PM => {
-        Mojolicious => "3.47"
+        Mojolicious => "4.63"
     },
     ABSTRACT_FROM => 'lib/Test/Mojo/Session.pm',
     AUTHOR => 'Andrey Khozov <avkhozov@googlemail.com>',
