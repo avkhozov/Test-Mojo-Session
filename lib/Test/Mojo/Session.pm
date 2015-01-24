@@ -2,6 +2,7 @@ package Test::Mojo::Session;
 
 use Mojo::Base 'Test::Mojo';
 use Mojo::Util qw(b64_decode hmac_sha1_sum);
+use Mojo::JSON qw(decode_json);
 
 our $VERSION = '1.01';
 
@@ -54,7 +55,7 @@ sub _extract_session {
     $sign eq hmac_sha1_sum($value, $_) and $ok = 1 for @{$app->secrets};
     return unless $ok;
 
-    my $session = Mojo::JSON->new->decode(b64_decode $value);
+    my $session = decode_json(b64_decode $value);
     return $session;
 }
 
