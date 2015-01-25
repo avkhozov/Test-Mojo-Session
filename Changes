@@ -2,6 +2,9 @@ Revision history for Perl extension Test::Mojo::Session.
 
 {{$NEXT}}
 
+    - Don't use deprecated Mojo::JSON and Mojo::JSON::Pointer API.
+    - Set minimum version of Mojolicious to 4.82.
+
 1.01  2014-02-05
     - Fixed dependency.
 
