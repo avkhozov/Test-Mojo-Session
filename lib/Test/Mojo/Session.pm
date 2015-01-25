@@ -138,9 +138,13 @@ L<Mojolicious>, L<Test::Mojo>.
 
 Andrey Khozov, C<avkhozov@googlemail.com>.
 
+=head1 CREDITS
+
+Renee, C<reb@perl-services.de>.
+
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2013-2014, Andrey Khozov.
+Copyright (C) 2013-2015, Andrey Khozov.
 
 This program is free software, you can redistribute it and/or modify it under
 the terms of the Artistic License version 2.0.
