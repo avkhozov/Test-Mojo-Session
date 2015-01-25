@@ -64,6 +64,7 @@
       }
    },
    "version" : "1.01",
+   "x_authority" : "cpan:AVKHOZOV",
    "x_contributors" : [
       "Renee <reb@perl-services.de>",
       "Andrey Khozov <avkhozov@gmail.com>"
