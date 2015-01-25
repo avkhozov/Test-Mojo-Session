@@ -15,21 +15,21 @@ sub session_has {
     my ($self, $p, $desc) = @_;
     $desc //= qq{session has value for JSON Pointer "$p"};
     my $session = $self->_extract_session;
-    return $self->_test('ok', !!Mojo::JSON::Pointer->new->contains($session, $p), $desc);
+    return $self->_test('ok', !!Mojo::JSON::Pointer->new($session)->contains($p), $desc);
 }
 
 sub session_hasnt {
     my ($self, $p, $desc) = @_;
     $desc //= qq{session has no value for JSON Pointer "$p"};
     my $session = $self->_extract_session;
-    return $self->_test('ok', !Mojo::JSON::Pointer->new->contains($session, $p), $desc);
+    return $self->_test('ok', !Mojo::JSON::Pointer->new($session)->contains($p), $desc);
 }
 
 sub session_is {
     my ($self, $p, $data, $desc) = @_;
     $desc //= qq{session exact match for JSON Pointer "$p"};
     my $session = $self->_extract_session;
-    return $self->_test('is_deeply', Mojo::JSON::Pointer->new->get($session, $p), $data, $desc);
+    return $self->_test('is_deeply', Mojo::JSON::Pointer->new($session)->get($p), $data, $desc);
 }
 
 sub session_ok {
