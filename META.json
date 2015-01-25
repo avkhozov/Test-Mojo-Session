@@ -63,7 +63,7 @@
          "web" : "https://github.com/avkhozov/test-mojo-session"
       }
    },
-   "version" : "1.01",
+   "version" : "1.02",
    "x_authority" : "cpan:AVKHOZOV",
    "x_contributors" : [
       "Renee <reb@perl-services.de>",
