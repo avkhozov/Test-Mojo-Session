@@ -1,6 +1,0 @@
-Changes
-Makefile.PL
-MANIFEST
-README.pod
-t/Test-Mojo-Session.t
-lib/Test/Mojo/Session.pm

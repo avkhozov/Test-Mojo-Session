@@ -1,8 +1,8 @@
-=head1 NAME
+# NAME
 
 Test::Mojo::Session - Testing session in Mojolicious applications
 
-=head1 SYNOPSIS
+# SYNOPSIS
 
     use Mojolicious::Lite;
     use Test::More;
@@ -26,58 +26,56 @@ Test::Mojo::Session - Testing session in Mojolicious applications
 
     done_testing();
 
-=head1 DESCRIPTION
+# DESCRIPTION
 
-L<Test::Mojo::Session> is an extension for the L<Test::Mojo>, which allows you
-to conveniently test session in L<Mojolicious> applications.
+[Test::Mojo::Session](https://metacpan.org/pod/Test::Mojo::Session) is an extension for the [Test::Mojo](https://metacpan.org/pod/Test::Mojo), which allows you
+to conveniently test session in [Mojolicious](https://metacpan.org/pod/Mojolicious) applications.
 
-=head1 METHODS
+# METHODS
 
-L<Test::Mojo::Sesssion> inherits all methods from L<Test::Mojo> and implements the
+[Test::Mojo::Sesssion](https://metacpan.org/pod/Test::Mojo::Sesssion) inherits all methods from [Test::Mojo](https://metacpan.org/pod/Test::Mojo) and implements the
 following new ones.
 
-=head2 session_has
+## session\_has
 
     $t = $t->session_has('/foo');
     $t = $t->session_has('/foo', 'session has "foo"');
 
 Check if current session contains a value that can be identified using the given
-JSON Pointer with L<Mojo::JSON::Pointer>.
+JSON Pointer with [Mojo::JSON::Pointer](https://metacpan.org/pod/Mojo::JSON::Pointer).
 
-=head2 session_hasnt
+## session\_hasnt
 
     $t = $t->session_hasnt('/bar');
     $t = $t->session_hasnt('/bar', 'session does not has "bar"');
 
 Check if current session no contains a value that can be identified using the given
-JSON Pointer with L<Mojo::JSON::Pointer>.
+JSON Pointer with [Mojo::JSON::Pointer](https://metacpan.org/pod/Mojo::JSON::Pointer).
 
-=head2 session_is
+## session\_is
 
     $t = $t->session_is('/pointer', 'value');
     $t = $t->session_is('/pointer', 'value', 'right halue');
 
-Check the session using the given JSON Pointer with L<Mojo::JSON::Pointer>.
+Check the session using the given JSON Pointer with [Mojo::JSON::Pointer](https://metacpan.org/pod/Mojo::JSON::Pointer).
 
-=head2 session_ok
+## session\_ok
 
     $t = $t->session_ok;
 
 Check for existence of the session in user agent.
 
-=head1 SEE ALSO
+# SEE ALSO
 
-L<Mojolicious>, L<Test::Mojo>.
+[Mojolicious](https://metacpan.org/pod/Mojolicious), [Test::Mojo](https://metacpan.org/pod/Test::Mojo).
 
-=head1 AUTHOR
+# AUTHOR
 
-Andrey Khozov, C<avkhozov@googlemail.com>.
+Andrey Khozov, `avkhozov@googlemail.com`.
 
-=head1 COPYRIGHT AND LICENSE
+# COPYRIGHT AND LICENSE
 
 Copyright (C) 2013-2014, Andrey Khozov.
 
 This program is free software, you can redistribute it and/or modify it under
 the terms of the Artistic License version 2.0.
-
-=cut
