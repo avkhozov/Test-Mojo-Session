@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "test-mojo-session",
+   "name" : "Test-Mojo-Session",
    "no_index" : {
       "directory" : [
          "t",
@@ -54,16 +54,16 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/avkhozov/test-mojo-session/issues"
+         "web" : "https://github.com/avkhozov/Test-Mojo-Session/issues"
       },
-      "homepage" : "https://github.com/avkhozov/test-mojo-session",
+      "homepage" : "https://github.com/avkhozov/Test-Mojo-Session",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/avkhozov/test-mojo-session.git",
-         "web" : "https://github.com/avkhozov/test-mojo-session"
+         "url" : "git://github.com/avkhozov/Test-Mojo-Session.git",
+         "web" : "https://github.com/avkhozov/Test-Mojo-Session"
       }
    },
-   "version" : "1.02",
+   "version" : "1.03",
    "x_authority" : "cpan:AVKHOZOV",
    "x_contributors" : [
       "Renee <reb@perl-services.de>",

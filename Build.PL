@@ -21,7 +21,7 @@ my %args = (
         'Module::Build' => 0.38,
     },
 
-    name            => 'test-mojo-session',
+    name            => 'Test-Mojo-Session',
     module_name     => 'Test::Mojo::Session',
     allow_pureperl => 0,
 

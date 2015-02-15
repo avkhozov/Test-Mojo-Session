@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/avkhozov/test-mojo-session.svg?branch=master)](https://travis-ci.org/avkhozov/test-mojo-session)
+[![Build Status](https://travis-ci.org/avkhozov/Test-Mojo-Session.svg?branch=master)](https://travis-ci.org/avkhozov/Test-Mojo-Session)
 # NAME
 
 Test::Mojo::Session - Testing session in Mojolicious applications

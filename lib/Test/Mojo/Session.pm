@@ -4,7 +4,7 @@ use Mojo::Base 'Test::Mojo';
 use Mojo::Util qw(b64_decode hmac_sha1_sum);
 use Mojo::JSON qw(decode_json);
 
-our $VERSION = '1.02';
+our $VERSION = '1.03';
 
 sub new {
     my $self = shift->SUPER::new(@_);

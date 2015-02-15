@@ -2,8 +2,10 @@ Revision history for Perl extension Test::Mojo::Session.
 
 {{$NEXT}}
 
-1.02 2015-01-25T06:38:23Z
+1.03 2015-02-15T12:20:31Z
+    - Rename distributive, use case sensitive name.
 
+1.02 2015-01-25T06:38:23Z
     - Don't use deprecated Mojo::JSON and Mojo::JSON::Pointer API.
     - Set minimum version of Mojolicious to 4.82.
 
