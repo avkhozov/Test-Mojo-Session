@@ -41,11 +41,12 @@ sub session_ok {
 sub _extract_session {
     my $self = shift;
 
-    my $jar = $self->ua->cookie_jar;
     my $app = $self->app;
     my $session_name = $app->sessions->cookie_name;
 
-    my ($session_cookie) = grep { $_->name eq $session_name } $jar->all;
+    my @cookies = $self->ua->cookie_jar->all;
+    @cookies = @{$cookies[0]} if ref $cookies[0] eq 'ARRAY';
+    my ($session_cookie) = grep { $_->name eq $session_name } @cookies;
     return unless $session_cookie;
 
     (my $value = $session_cookie->value) =~ s/--([^\-]+)$//;

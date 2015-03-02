@@ -1,6 +1,7 @@
 Revision history for Perl extension Test::Mojo::Session.
 
 {{$NEXT}}
+    - Added compatibility with Mojo 6.0
 
 1.03 2015-02-15T12:20:31Z
     - Rename distributive, use case sensitive name.
