@@ -1,6 +1,8 @@
 Revision history for Perl extension Test::Mojo::Session.
 
 {{$NEXT}}
+
+1.04 2015-03-02T04:56:47Z
     - Added compatibility with Mojo 6.0
 
 1.03 2015-02-15T12:20:31Z
