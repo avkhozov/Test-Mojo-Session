@@ -92,6 +92,30 @@ Test::Mojo::Session - Testing session in Mojolicious applications
 
   done_testing();
 
+Use L<Test::Mojo::Sesssion> via L<Test::Mojo::WithRoles>.
+
+  use Mojolicious::Lite;
+  use Test::More;
+  use Test::Mojo::WithRoles 'Session';
+
+  get '/set' => sub {
+    my $c = shift;
+    $c->session(s1 => 'session data');
+    $c->session(s3 => [1, 3]);
+    $c->render(text => 's1');
+  } => 'set';
+
+  my $t = Test::Mojo::WithRoles->new;
+  $t->get_ok('/set')
+    ->status_is(200)
+    ->session_ok
+    ->session_has('/s1')
+    ->session_is('/s1' => 'session data')
+    ->session_hasnt('/s2')
+    ->session_is('/s3' => [1, 3]);
+
+  done_testing();
+
 =head1 DESCRIPTION
 
 L<Test::Mojo::Session> is an extension for the L<Test::Mojo>, which allows you
