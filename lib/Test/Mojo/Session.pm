@@ -53,7 +53,20 @@ sub _extract_session {
   my $sign = $1;
 
   my $ok;
-  $sign eq hmac_sha1_sum($value, $_) and $ok = 1 for @{$app->secrets};
+  for (@{$app->secrets}) {
+
+    if (
+
+      # Mojolicious < 8.13
+      $sign eq hmac_sha1_sum($value, $_) ||
+
+      # Mojolicious >= 8.13
+      $sign eq hmac_sha1_sum("$session_name=$value", $_)
+    ) {
+      $ok = 1;
+      last;
+    }
+  }
   return unless $ok;
 
   my $session = decode_json(b64_decode $value);
