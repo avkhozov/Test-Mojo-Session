@@ -1,5 +1,5 @@
 requires 'Mojolicious', '4.82';
-requires 'Role::Tiny;
+requires 'Role::Tiny';
 
 on build => sub {
     requires 'ExtUtils::MakeMaker';
