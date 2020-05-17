@@ -4,38 +4,46 @@ use Mojo::Base 'Test::Mojo';
 use Mojo::Util qw(b64_decode hmac_sha1_sum);
 use Mojo::JSON 'decode_json';
 
-our $VERSION = '1.05';
+our $VERSION = '1.06';
 
 sub new {
   my $self = shift->SUPER::new(@_);
   return $self;
 }
 
+# Compatibility hack for Mojolicious < 8.36
+sub test {
+  if (Test::Mojo->can('test')) {
+    return shift->SUPER::test(@_);
+  }
+  return shift->SUPER::_test(@_);
+}
+
 sub session_has {
   my ($self, $p, $desc) = @_;
   $desc //= qq{session has value for JSON Pointer "$p"};
   my $session = $self->_extract_session;
-  return $self->_test('ok', !!Mojo::JSON::Pointer->new($session)->contains($p), $desc);
+  return $self->test('ok', !!Mojo::JSON::Pointer->new($session)->contains($p), $desc);
 }
 
 sub session_hasnt {
   my ($self, $p, $desc) = @_;
   $desc //= qq{session has no value for JSON Pointer "$p"};
   my $session = $self->_extract_session;
-  return $self->_test('ok', !Mojo::JSON::Pointer->new($session)->contains($p), $desc);
+  return $self->test('ok', !Mojo::JSON::Pointer->new($session)->contains($p), $desc);
 }
 
 sub session_is {
   my ($self, $p, $data, $desc) = @_;
   $desc //= qq{session exact match for JSON Pointer "$p"};
   my $session = $self->_extract_session;
-  return $self->_test('is_deeply', Mojo::JSON::Pointer->new($session)->get($p), $data, $desc);
+  return $self->test('is_deeply', Mojo::JSON::Pointer->new($session)->get($p), $data, $desc);
 }
 
 sub session_ok {
   my $self    = shift;
   my $session = $self->_extract_session;
-  return $self->_test('ok', !!$session, 'session ok');
+  return $self->test('ok', !!$session, 'session ok');
 }
 
 sub _extract_session {
