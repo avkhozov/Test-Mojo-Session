@@ -41,36 +41,15 @@ sub session_ok {
 sub _extract_session {
   my $self = shift;
 
-  my $app          = $self->app;
-  my $session_name = $app->sessions->cookie_name;
+  my $app      = $self->app;
+  my $sessions = $app->sessions;
+  my $c        = $app->build_controller;
+  my $name     = $sessions->cookie_name;
+  return unless my $cookie = (grep { $_->name eq $name } @{$self->ua->cookie_jar->all})[0];
 
-  my @cookies = $self->ua->cookie_jar->all;
-  @cookies = @{$cookies[0]} if ref $cookies[0] eq 'ARRAY';
-  my ($session_cookie) = grep { $_->name eq $session_name } @cookies;
-  return unless $session_cookie;
-
-  (my $value = $session_cookie->value) =~ s/--([^\-]+)$//;
-  my $sign = $1;
-
-  my $ok;
-  for (@{$app->secrets}) {
-
-    if (
-
-      # Mojolicious < 8.13
-      $sign eq hmac_sha1_sum($value, $_) ||
-
-      # Mojolicious >= 8.13
-      $sign eq hmac_sha1_sum("$session_name=$value", $_)
-    ) {
-      $ok = 1;
-      last;
-    }
-  }
-  return unless $ok;
-
-  my $session = decode_json(b64_decode $value);
-  return $session;
+  $c->req->cookies($cookie);
+  $sessions->load($c);
+  return $c->session;
 }
 
 1;
