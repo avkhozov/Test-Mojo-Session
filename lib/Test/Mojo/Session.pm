@@ -200,9 +200,11 @@ Andrey Khozov, C<avkhozov@googlemail.com>.
 
 Renee, C<reb@perl-services.de>.
 
+Gene Boggs, C<gene.boggs@gmail.com>.
+
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2013-2015, Andrey Khozov.
+Copyright (C) 2013-2022, Andrey Khozov.
 
 This program is free software, you can redistribute it and/or modify it under
 the terms of the Artistic License version 2.0.
