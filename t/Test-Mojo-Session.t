@@ -17,7 +17,7 @@ $t->get_ok('/set')
     ->session_is('/s1' => 'session data')
     ->session_hasnt('/s2')
     ->session_is('/s3' => [1, 3], 's3 contains right array')
-    ->session_like('/s1' => qr/data/, 's3 contains "data"')
-    ->session_unlike('/s1' => qr/foo/, 's3 does not contain "foo"');
+    ->session_like('/s1' => qr/data/, 's1 contains "data"')
+    ->session_unlike('/s1' => qr/foo/, 's1 does not contain "foo"');
 
 done_testing();
