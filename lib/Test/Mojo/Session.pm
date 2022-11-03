@@ -198,9 +198,9 @@ Andrey Khozov, C<avkhozov@googlemail.com>.
 
 =head1 CREDITS
 
-Renee, C<reb@perl-services.de>.
+Renee, C<reb@perl-services.de>
 
-Gene Boggs, C<gene.boggs@gmail.com>.
+Gene Boggs, C<gene.boggs@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
