@@ -4,7 +4,7 @@
       "Andrey Khozov, C<avkhozov@googlemail.com>."
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v3.1.10, CPAN::Meta::Converter version 2.150010",
+   "generated_by" : "Minilla/v3.1.19, CPAN::Meta::Converter version 2.150010",
    "license" : [
       "artistic_2"
    ],
@@ -60,16 +60,17 @@
       "homepage" : "https://github.com/avkhozov/Test-Mojo-Session",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/avkhozov/Test-Mojo-Session.git",
+         "url" : "https://github.com/avkhozov/Test-Mojo-Session.git",
          "web" : "https://github.com/avkhozov/Test-Mojo-Session"
       }
    },
-   "version" : "1.06",
+   "version" : "1.07",
    "x_authority" : "cpan:AVKHOZOV",
    "x_contributors" : [
       "Akron <nils@diewald-online.de>",
       "Andrey Khozov <andrey@rydlab.ru>",
       "Andrey Khozov <avkhozov@gmail.com>",
+      "Gene Boggs <gene@ology.net>",
       "Mohammad S Anwar <mohammad.anwar@yahoo.com>",
       "Renee <reb@perl-services.de>"
    ],
